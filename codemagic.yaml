@@ -8,11 +8,14 @@ workflows:
       xcode: latest
       cocoapods: default
     scripts:
-      - name: Scarica dipendenze Flutter
-        script: flutter pub get
+      - name: Pulisci e scarica dipendenze Flutter
+        script: |
+          flutter clean
+          flutter pub get
       - name: Installa dipendenze CocoaPods (iOS)
         script: |
           cd ios
+          pod repo update
           pod install
       - name: Compila app iOS (Release)
         script: |
