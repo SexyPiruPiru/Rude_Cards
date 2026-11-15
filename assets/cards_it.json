@@ -1,0 +1,57 @@
+{
+  "decks": [
+    {
+      "id": "base",
+      "name": "Mazzo Base",
+      "description": "Il classico umorismo cinico quotidiano.",
+      "black_cards": [
+        "Durante la cena di Natale, nonna ha tirato fuori ____.",
+        "Il vero motivo per cui i dinosauri si sono estinti è ____.",
+        "Non ho mai capito il fascino di ____, finché non l'ho provato.",
+        "La mia ultima ricerca su Google prima di morire sarà: ____.",
+        "Al primo appuntamento è sempre meglio evitare di parlare di ____.",
+        "Caro Babbo Natale, quest'anno sono stato cattivo e merito ____.",
+        "L'ingrediente segreto della ricetta della nonna è sempre stato ____."
+      ],
+      "white_cards": [
+        "Un pacco di goleador scadute",
+        "La cronologia di navigazione in incognito",
+        "L'ansia sociale del lunedì mattina",
+        "Un piccione con problemi di gestione della rabbia",
+        "Le notifiche del gruppo WhatsApp dei parenti",
+        "Dimenticare il nome della persona che stai baciando",
+        "Fingere di avere una chiamata importante per scappare",
+        "La batteria al 2% senza caricabatterie",
+        "La foto tessera della patente",
+        "Un messaggio vocale di 7 minuti e 42 secondi",
+        "Accorgersi troppo tardi che manca la carta igienica",
+        "La suoneria al massimo in chiesa",
+        "Un frisbee lanciato direttamente in faccia"
+      ]
+    },
+    {
+      "id": "italia_trash",
+      "name": "Italia & Trash",
+      "description": "Disagi nostrani, TV spazzatura e vita di provincia.",
+      "black_cards": [
+        "Cosa non vorresti mai trovare nel tuo kebab alle 4 del mattino? ____.",
+        "Il nuovo decreto del governo prevede l'obbligo di ____ per tutti i maggiorenni.",
+        "Dopo tre spritz di troppo finisco sempre per ____.",
+        "La vera causa della crisi di governo è stata ____."
+      ],
+      "white_cards": [
+        "Un commercialista dell'Agenzia delle Entrate",
+        "Una grigliata di Ferragosto sotto il diluvio universale",
+        "Un audiolibro letto da Alessandro Borghese",
+        "Un biglietto di sola andata per il Molise",
+        "Chiedere lo scontrino al bar del paese",
+        "Un'assemblea di condominio durata sei ore",
+        "L'odore della metropolitana ad agosto",
+        "Un'offerta di lavoro pagata in visibilità",
+        "Un caffè corretto con le lacrime degli stagisti",
+        "Un corso motivazionale tenuto da un truffatore",
+        "Sbagliare chat e mandare lo screenshot al diretto interessato"
+      ]
+    }
+  ]
+}
