@@ -1,6 +1,5 @@
 platform :ios, '15.0'
 
-# CocoaPods analytics sends network stats synchronously affecting flutter build latency.
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
 project 'Runner', {
@@ -12,14 +11,26 @@ project 'Runner', {
 def flutter_root
   generated_xcode_build_settings_path = File.expand_path(File.join('..', 'Flutter', 'Generated.xcconfig'), __FILE__)
   unless File.exist?(generated_xcode_build_settings_path)
-    raise "#{generated_xcode_build_settings_path} must exist. If you're running pod install manually, make sure flutter pub get is executed first"
+    raise "#{generated_xcode_build_settings_path} must exist. Run flutter pub get first."
   end
 
+  flutter_path = nil
   File.foreach(generated_xcode_build_settings_path) do |line|
     matches = line.match(/FLUTTER_ROOT\=(.*)/)
-    return matches[1].strip if matches
+    if matches
+      flutter_path = matches[1].strip
+      break
+    end
   end
-  raise "FLUTTER_ROOT not found in #{generated_xcode_build_settings_path}. Try deleting Generated.xcconfig, then run flutter pub get"
+
+  # Se siamo su Mac (Codemagic) e il percorso letto è di Windows, usa l'ambiente nativo del Mac
+  if RUBY_PLATFORM =~ /darwin/ && (flutter_path.nil? || flutter_path.include?(':') || flutter_path.include?('\\'))
+    flutter_path = ENV['FLUTTER_ROOT']
+  end
+
+  return flutter_path if flutter_path && File.directory?(flutter_path)
+
+  raise "FLUTTER_ROOT non valido o non trovato in Generated.xcconfig."
 end
 
 require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelper'), flutter_root)
